@@ -1,8 +1,14 @@
-var button = document.getElementById("bad");
+const badButton = document.getElementById("bad");
+const goodButton = document.getElementById("good");
+const canvas = document.getElementById("canvas");
+const jsConfetti = new JSConfetti();
 // button.style.visibility = "hidden";
 
 function hide() {
-    button.style.visibility = "hidden";
+    badButton.style.display = "none";
 }
 
-button.addEventListener("mouseover", hide);
+badButton.addEventListener("mouseover", hide);
+goodButton.addEventListener("click", () => {
+    jsConfetti.addConfetti();
+})
